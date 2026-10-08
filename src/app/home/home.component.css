@@ -1,0 +1,45 @@
+
+/* Form row styling */
+.row {
+    margin-bottom: 15px; /* Space between form rows */
+}
+
+/* Input field styling */
+.form-control {
+    width: 100%;         /* Make input fields take full width */
+    padding: 10px;      /* Add padding inside input fields */
+    border: 1px solid #ced4da; /* Border styling */
+    border-radius: 4px; /* Rounded corners */
+    transition: border-color 0.3s; /* Smooth border color transition */
+}
+
+/* Input focus effect */
+.form-control:focus {
+    border-color: #80bdff; /* Change border color on focus */
+    outline: none;         /* Remove outline */
+    box-shadow: 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Add shadow on focus */
+}
+
+/* Button styling */
+.btn {
+    padding: 10px 15px; /* Padding for the button */
+    font-size: 16px;    /* Button text size */
+    color: #fff;        /* Button text color */
+    background-color: #28a745; /* Button background color */
+    border: none;       /* Remove border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer;     /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+.btn:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Error message styling */
+.error-message {
+    color: #dc3545; /* Red color for error messages */
+    margin-top: 5px; /* Space above error messages */
+    font-size: 14px; /* Font size for error messages */
+}

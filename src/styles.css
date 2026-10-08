@@ -1,0 +1,6 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Page background — must be global: component styles can't reach <body> */
+body {
+    background-color: antiquewhite;
+}

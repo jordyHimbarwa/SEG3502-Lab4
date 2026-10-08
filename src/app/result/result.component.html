@@ -1,0 +1,27 @@
+<div *ngIf="entry; else noEntry">
+  <h3>Informations Utilisateur:</h3>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Prenom</th>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ entry.prenom }}</td>
+        <td>{{ entry.nom }}</td>
+        <td>{{ entry.email }}</td>
+        <td>{{ entry.telephone }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <a routerLink="/" class="btn btn-secondary">Retour au formulaire</a>
+</div>
+
+<ng-template #noEntry>
+  <p>Aucune information soumise.</p>
+  <a routerLink="/" class="btn btn-secondary">Retour au formulaire</a>
+</ng-template>

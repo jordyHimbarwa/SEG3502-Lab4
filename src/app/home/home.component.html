@@ -1,0 +1,51 @@
+<form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+  <div class="mb-3">
+    <input
+      class="form-control"
+      formControlName="prenom"
+      placeholder="Entrer votre Prenom"
+    />
+    <div *ngIf="userForm.get('prenom')?.invalid && userForm.get('prenom')?.touched">
+      <small class="text-danger">Le prénom est obligatoire</small>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input
+      class="form-control"
+      formControlName="nom"
+      placeholder="Entrer votre Nom"
+    />
+    <div *ngIf="userForm.get('nom')?.invalid && userForm.get('nom')?.touched">
+      <small class="text-danger">Le nom est obligatoire</small>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input
+      class="form-control"
+      type="tel"
+      formControlName="telephone"
+      placeholder="Entrer votre Numero"
+    />
+    <div *ngIf="userForm.get('telephone')?.invalid && userForm.get('telephone')?.touched">
+      <small class="text-danger">Le numéro doit être un numéro valide de 10 chiffres</small>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <input
+      class="form-control"
+      type="email"
+      formControlName="email"
+      placeholder="Entrer votre email"
+    />
+    <div *ngIf="userForm.get('email')?.invalid && userForm.get('email')?.touched">
+      <small class="text-danger">L'email doit être valide</small>
+    </div>
+  </div>
+
+  <button type="submit" class="btn btn-success" [disabled]="userForm.invalid">
+    Soumettre
+  </button>
+</form>
